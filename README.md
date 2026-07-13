@@ -44,15 +44,37 @@ The build passes `--baseurl` automatically, so internal links (all using the
 `relative_url` filter) work at the current project subpath and will continue to
 work once served from a root domain.
 
+## Design system
+
+The visual language is an "art-deco garden": a cream ground, sage-green primary,
+brushed-gold linework, blush/coral warm notes, and deep pine for the dark
+footer. It comes from a Claude Design handoff packet (palette derived from the
+couple's rainbow-trout and art-deco references). The signature motif is the
+**arch** niche, used in the home-page triptych.
+
+- Tokens (colors, type scale, spacing, radii, shadows, motion) live at the top
+  of [`assets/css/main.css`](assets/css/main.css), reproduced from the packet,
+  followed by component and page styles.
+- Type: **Marcellus** (display, uppercase + wide tracking), **Cormorant
+  Garamond** (subtitles + body), **Jost** (UI/nav/buttons), **Pinyon Script**
+  (the couple's names and the `&` only). Loaded from Google Fonts in
+  [`_includes/head.html`](_includes/head.html) as substitutions; swap for
+  licensed `@font-face` files if the couple provides them.
+- Reusable pieces are CSS classes (`.bs-btn`, `.bs-arch`, `.bs-eyebrow`,
+  `.bs-divider`, `.page-header`) rather than the packet's React components,
+  since the site is Jekyll/Liquid.
+- The packet's inspiration images (trout, deco interiors) are reference-only and
+  are **not** used as site content.
+
 ## Structure
 
 ```
 _config.yml            Site config
 _data/nav.yml          Top navigation items
-_layouts/default.html  Page shell
-_includes/             head, header, footer partials
-assets/css/main.css    Styles (placeholder, pre-design-packet)
-index.md               Home
+_layouts/default.html  Page shell (renders the page-header + prose)
+_includes/             head (fonts), header (nav), footer (pine)
+assets/css/main.css    Design tokens + components + page styles
+index.md               Home (hero + arch triptych)
 schedule.md            Schedule / events
 travel.md              Travel & accommodations (room blocks)
 things-to-do.md        Local recommendations

@@ -1,11 +1,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#7a8b74">
+<meta name="theme-color" content="#5f6f4f">
 
 {%- comment -%}
   jekyll-seo-tag emits <title>, description, canonical, and Open Graph / Twitter
   tags from _config.yml and page front matter.
 {%- endcomment -%}
 {% seo %}
+
+{%- comment -%}
+  Design-system fonts (Google Fonts substitutions, per the design packet):
+  Marcellus (display), Cormorant Garamond (serif body/subtitles), Jost (UI),
+  Pinyon Script (names & flourishes). Swap for @font-face if licensed faces arrive.
+{%- endcomment -%}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&family=Pinyon+Script&display=swap">
 
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
