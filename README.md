@@ -69,15 +69,22 @@ couple's rainbow-trout and art-deco references). The signature motif is the
 ## Structure
 
 ```
+PRODUCT.md             Brand/product context (impeccable register)
+DESIGN.md              Visual system + layout notes
 _config.yml            Site config
 _data/nav.yml          Top navigation items
-_layouts/default.html  Page shell (renders the page-header + prose)
-_includes/             head (fonts), header (nav), footer (pine)
-assets/css/main.css    Design tokens + components + page styles
-index.md               Home (hero + arch triptych)
-schedule.md            Schedule / events
-travel.md              Travel & accommodations (room blocks)
-things-to-do.md        Local recommendations
-registry.md            Registry links
-faq.md                 Frequently asked questions
+_layouts/default.html  Page shell (renders the page-hero band + content)
+_includes/             head (fonts), header (nav), footer (pine), deco-plate (SVG imagery)
+assets/css/main.css    Design tokens + components + full-bleed layout system
+index.html             Home (hero + arch triptych)
+schedule.html          Venue location, day-of timeline, parking link
+travel.html            Room blocks, hotel recs, restaurant recs
+things-to-do.html      Area sites & attractions (deco gallery)
+faq.html               Frequently asked questions
+parking.html           Parking locations (NOT in nav; linked from Schedule + FAQ)
 ```
+
+Pages are hand-authored HTML + Liquid (not Markdown) so each can compose
+full-width bands/splits/tiles. Image slots use on-brand art-deco SVG
+placeholders ([`_includes/deco-plate.html`](_includes/deco-plate.html)); swap
+each for an `<img>` when the couple's photos arrive.

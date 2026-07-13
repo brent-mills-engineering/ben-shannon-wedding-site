@@ -27,6 +27,8 @@ permalink: pretty
 exclude:
   - local/
   - README.md
+  - PRODUCT.md
+  - DESIGN.md
   - Gemfile
   - Gemfile.lock
   - vendor/

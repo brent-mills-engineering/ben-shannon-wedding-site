@@ -1,0 +1,71 @@
+{%- comment -%}
+  deco-plate.html — an on-brand art-deco SVG placeholder that fills its parent
+  (an arch niche or a tile). Stands in for the couple's real photos; swap the
+  whole include for an <img> when photos arrive.
+  Params:
+    motif : fan | tulip | arch | scales   (default fan)
+    tone  : cream | sage | blush | steel | teal | pine   (default cream)
+  Sets --dp-ground / --dp-ink / --dp-accent, consumed by .dp-* rules in CSS.
+{%- endcomment -%}
+{%- assign motif = include.motif | default: 'fan' -%}
+{%- assign tone = include.tone | default: 'cream' -%}
+{%- case tone -%}
+  {%- when 'sage' -%}{%- assign vars = '--dp-ground:var(--sage-100);--dp-ink:var(--gold-600);--dp-accent:var(--blush-300)' -%}
+  {%- when 'blush' -%}{%- assign vars = '--dp-ground:var(--blush-100);--dp-ink:var(--coral-600);--dp-accent:var(--gold-400)' -%}
+  {%- when 'steel' -%}{%- assign vars = '--dp-ground:var(--blue-100);--dp-ink:var(--gold-600);--dp-accent:var(--blue-500)' -%}
+  {%- when 'teal' -%}{%- assign vars = '--dp-ground:var(--blue-700);--dp-ink:var(--gold-400);--dp-accent:var(--blush-300)' -%}
+  {%- when 'pine' -%}{%- assign vars = '--dp-ground:var(--pine-800);--dp-ink:var(--gold-400);--dp-accent:var(--sage-300)' -%}
+  {%- else -%}{%- assign vars = '--dp-ground:var(--cream-100);--dp-ink:var(--gold-600);--dp-accent:var(--sage-300)' -%}
+{%- endcase -%}
+<span class="deco-plate deco-plate--{{ tone }}" style="{{ vars }}" aria-hidden="true">
+<svg viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" focusable="false">
+<rect class="dp-g" x="0" y="0" width="300" height="400"/>
+{%- case motif -%}
+{%- when 'fan' -%}
+<g class="dp-i">
+<circle cx="150" cy="400" r="108"/><circle cx="150" cy="400" r="176"/><circle cx="150" cy="400" r="244"/><circle cx="150" cy="400" r="312"/>
+<line x1="150" y1="400" x2="150" y2="-40"/>
+<line x1="150" y1="400" x2="288" y2="-10"/><line x1="150" y1="400" x2="12" y2="-10"/>
+<line x1="150" y1="400" x2="410" y2="60"/><line x1="150" y1="400" x2="-110" y2="60"/>
+<line x1="150" y1="400" x2="500" y2="150"/><line x1="150" y1="400" x2="-200" y2="150"/>
+</g>
+<circle class="dp-a" cx="150" cy="400" r="48"/>
+<circle class="dp-i" cx="150" cy="400" r="48"/>
+<rect class="dp-i" x="139" y="41" width="22" height="22" transform="rotate(45 150 52)"/>
+{%- when 'tulip' -%}
+<g transform="translate(0,6)">
+<line class="dp-i" x1="150" y1="384" x2="150" y2="250"/>
+<g class="dp-i">
+<g transform="rotate(0 150 262)"><path d="M150,116 C170,168 170,214 150,256 C130,214 130,168 150,116 Z"/></g>
+<g transform="rotate(26 150 262)"><path d="M150,140 C168,186 168,224 150,258 C132,224 132,186 150,140 Z"/></g>
+<g transform="rotate(-26 150 262)"><path d="M150,140 C168,186 168,224 150,258 C132,224 132,186 150,140 Z"/></g>
+<g transform="rotate(52 150 262)"><path d="M150,168 C165,204 165,234 150,260 C135,234 135,204 150,168 Z"/></g>
+<g transform="rotate(-52 150 262)"><path d="M150,168 C165,204 165,234 150,260 C135,234 135,204 150,168 Z"/></g>
+</g>
+<path class="dp-a" d="M150,150 C162,190 162,224 150,252 C138,224 138,190 150,150 Z"/>
+<path class="dp-i" d="M118,300 Q150,322 182,300"/>
+<path class="dp-i" d="M150,332 C118,328 102,348 96,376"/>
+<path class="dp-i" d="M150,332 C182,328 198,348 204,376"/>
+</g>
+{%- when 'arch' -%}
+<g class="dp-i">
+<path d="M52,392 L52,172 A98,98 0 0 1 248,172 L248,392"/>
+<path d="M78,392 L78,183 A72,72 0 0 1 222,183 L222,392"/>
+</g>
+<path class="dp-a" d="M102,392 L102,192 A48,48 0 0 1 198,192 L198,392 Z" opacity="0.22"/>
+<path class="dp-i dp-i-thin" d="M102,392 L102,192 A48,48 0 0 1 198,192 L198,392"/>
+<rect class="dp-a" x="137" y="52" width="26" height="26" transform="rotate(45 150 65)"/>
+<rect class="dp-i" x="137" y="52" width="26" height="26" transform="rotate(45 150 65)"/>
+<line class="dp-i" x1="34" y1="392" x2="266" y2="392"/>
+{%- when 'scales' -%}
+<g class="dp-i dp-i-thin">
+<path d="M-30,70 a34,26 0 0 1 68,0 a34,26 0 0 1 68,0 a34,26 0 0 1 68,0 a34,26 0 0 1 68,0 a34,26 0 0 1 68,0"/>
+<path d="M4,120 a34,26 0 0 1 68,0 a34,26 0 0 1 68,0 a34,26 0 0 1 68,0 a34,26 0 0 1 68,0 a34,26 0 0 1 68,0"/>
+<path d="M-30,170 a34,26 0 0 1 68,0 a34,26 0 0 1 68,0 a34,26 0 0 1 68,0 a34,26 0 0 1 68,0 a34,26 0 0 1 68,0"/>
+<path d="M4,220 a34,26 0 0 1 68,0 a34,26 0 0 1 68,0 a34,26 0 0 1 68,0 a34,26 0 0 1 68,0 a34,26 0 0 1 68,0"/>
+<path d="M-30,270 a34,26 0 0 1 68,0 a34,26 0 0 1 68,0 a34,26 0 0 1 68,0 a34,26 0 0 1 68,0 a34,26 0 0 1 68,0"/>
+<path d="M4,320 a34,26 0 0 1 68,0 a34,26 0 0 1 68,0 a34,26 0 0 1 68,0 a34,26 0 0 1 68,0 a34,26 0 0 1 68,0"/>
+</g>
+{%- endcase -%}
+</svg>
+</span>
