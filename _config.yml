@@ -1,0 +1,37 @@
+# Ben & Shannon's Wedding - Jekyll site config
+
+title: "Ben & Shannon"
+description: >-
+  Ben and Shannon are getting married. Find event details, travel and
+  accommodations, and everything you need to celebrate with us.
+lang: en
+
+# No custom domain yet. GitHub serves a project site at
+# https://<owner>.github.io/ben-shannon-wedding-site/. Leave baseurl empty here;
+# the Actions build injects the correct base path via --baseurl at build time,
+# and all internal links/assets use the `relative_url` filter so they resolve
+# whether the site is served at a subpath now or a root domain later.
+url: "https://brent-mills-engineering.github.io"
+baseurl: ""
+
+# We hand-author all markup; no theme.
+theme: null
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+markdown: kramdown
+permalink: pretty
+
+# Keep dev cruft and build tooling out of the published site.
+exclude:
+  - local/
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - .github/
+  - "*.log"
+
+sass:
+  style: compressed

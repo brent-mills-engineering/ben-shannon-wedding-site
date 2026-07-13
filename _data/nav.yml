@@ -1,0 +1,14 @@
+# Top navigation. `url` values are root-relative; templates pass them through
+# the `relative_url` filter so they resolve under the site's base path.
+- title: Home
+  url: /
+- title: Schedule
+  url: /schedule/
+- title: Travel & Stay
+  url: /travel/
+- title: Things to Do
+  url: /things-to-do/
+- title: Registry
+  url: /registry/
+- title: FAQ
+  url: /faq/
