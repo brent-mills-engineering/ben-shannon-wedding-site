@@ -2,7 +2,7 @@
 layout: default
 title: Things to Do
 eyebrow: Around Town
-subtitle: Make a weekend of it.
+subtitle: A few of our favorite corners of Baltimore.
 hero_tone: teal
 permalink: /things-to-do/
 ---
@@ -11,58 +11,113 @@ permalink: /things-to-do/
   <div class="wrap wrap--page">
     <div class="section-head section-head--center">
       <h2 class="section-title">See &amp; do</h2>
-      <p class="section-lead">If you're making a trip of it, here's the lay of the land. Our specific picks are on the way.</p>
+      <p class="section-lead">Landmarks and haunts worth a detour while you're in town.</p>
     </div>
     <div class="tiles tiles--wide">
-      <div class="arch-card reveal">
-        <span class="bs-arch">{% include deco-plate.html motif="fan" tone="sage" %}</span>
-        <span class="arch-card__eyebrow">Outdoors</span>
-        <span class="arch-card__title">Parks &amp; Views</span>
-        <span class="arch-card__note">Trails, gardens, and places to catch the sunset.</span>
-      </div>
-      <div class="arch-card reveal reveal-2">
-        <span class="bs-arch">{% include deco-plate.html motif="scales" tone="steel" %}</span>
-        <span class="arch-card__eyebrow">On the Water</span>
-        <span class="arch-card__title">Lakes &amp; Rivers</span>
-        <span class="arch-card__note">The water the whole palette came from.</span>
-      </div>
-      <div class="arch-card reveal reveal-3">
-        <span class="bs-arch">{% include deco-plate.html motif="arch" tone="blush" %}</span>
-        <span class="arch-card__eyebrow">History</span>
-        <span class="arch-card__title">Culture &amp; Landmarks</span>
-        <span class="arch-card__note">Museums, galleries, and local history.</span>
-      </div>
-      <div class="arch-card reveal">
-        <span class="bs-arch">{% include deco-plate.html motif="tulip" tone="cream" %}</span>
-        <span class="arch-card__eyebrow">Local Flavor</span>
-        <span class="arch-card__title">Food &amp; Drink</span>
-        <span class="arch-card__note">Coffee, breweries, and a good meal out.</span>
-      </div>
-      <div class="arch-card reveal reveal-2">
-        <span class="bs-arch">{% include deco-plate.html motif="fan" tone="steel" %}</span>
-        <span class="arch-card__eyebrow">In Town</span>
-        <span class="arch-card__title">Shops &amp; Strolls</span>
-        <span class="arch-card__note">Main-street browsing and easy walks.</span>
-      </div>
-      <div class="arch-card reveal reveal-3">
-        <span class="bs-arch">{% include deco-plate.html motif="tulip" tone="sage" %}</span>
-        <span class="arch-card__eyebrow">With the Family</span>
-        <span class="arch-card__title">For the Kids</span>
-        <span class="arch-card__note">Family-friendly stops for all ages.</span>
-      </div>
+      <article class="listing reveal">
+        <div class="plate"><img src="{{ '/assets/img/fort-mchenry.jpg' | relative_url }}" alt="Fort McHenry's star-shaped earthworks and cannons overlooking Baltimore harbor" loading="lazy" width="1200" height="800"></div>
+        <div class="listing__body">
+          <p class="card-kicker">Locust Point</p>
+          <h3 class="card-title">Fort McHenry</h3>
+          <p class="muted">2400 E. Fort Ave, Baltimore, MD 21230</p>
+          <div class="listing__foot"><a class="ui-link" href="https://www.nps.gov/fomc/" target="_blank" rel="noopener">Visit website</a></div>
+        </div>
+      </article>
+      <article class="listing reveal reveal-2">
+        <div class="plate"><img src="{{ '/assets/img/walters.jpg' | relative_url }}" alt="The Walters Art Museum, a Beaux-Arts building on North Charles Street" loading="lazy" width="1200" height="900"></div>
+        <div class="listing__body">
+          <p class="card-kicker">Mount Vernon</p>
+          <h3 class="card-title">The Walters Art Museum</h3>
+          <p class="muted">600 N. Charles St, Baltimore, MD 21201</p>
+          <div class="listing__foot"><a class="ui-link" href="https://thewalters.org/" target="_blank" rel="noopener">Visit website</a></div>
+        </div>
+      </article>
+      <article class="listing reveal reveal-3">
+        <div class="plate"><img src="{{ '/assets/img/charles-theatre.jpg' | relative_url }}" alt="The Charles Theatre, a historic red-brick cinema on North Charles Street" loading="lazy" width="1200" height="800"></div>
+        <div class="listing__body">
+          <p class="card-kicker">Station North</p>
+          <h3 class="card-title">The Charles Theatre</h3>
+          <p class="muted">1711 N. Charles St, Baltimore, MD 21201</p>
+          <div class="listing__foot"><a class="ui-link" href="https://thecharles.com/" target="_blank" rel="noopener">Visit website</a></div>
+        </div>
+      </article>
     </div>
   </div>
 </section>
 
 <section class="band band--raised">
-  <div class="wrap wrap--narrow center">
-    <h2 class="section-title">Hungry?</h2>
-    <p class="section-lead" style="margin-inline:auto;">Our restaurant recommendations live with the travel details.</p>
-    <div class="bs-btn-row" style="justify-content:center; margin-top:var(--space-6);">
-      <a class="bs-btn bs-btn--outline" href="{{ '/travel/' | relative_url }}">Where to eat &amp; stay</a>
+  <div class="wrap wrap--page">
+    <div class="section-head section-head--center">
+      <h2 class="section-title">Eat</h2>
+      <p class="section-lead">Where we'd send you for a good meal.</p>
+    </div>
+    <div class="tiles tiles--wide">
+      <article class="listing reveal">
+        <div class="plate">{% include deco-plate.html motif="tulip" tone="cream" %}</div>
+        <div class="listing__body">
+          <p class="card-kicker">Clipper Mill</p>
+          <h3 class="card-title">Artifact Coffee</h3>
+          <p class="muted">1500 Union Ave, Baltimore, MD 21211</p>
+          <div class="listing__foot"><a class="ui-link" href="https://www.artifactcoffee.com/" target="_blank" rel="noopener">Visit website</a></div>
+        </div>
+      </article>
+      <article class="listing reveal reveal-2">
+        <div class="plate">{% include deco-plate.html motif="fan" tone="blush" %}</div>
+        <div class="listing__body">
+          <p class="card-kicker">Hampden</p>
+          <h3 class="card-title">Dylan's Oyster Cellar</h3>
+          <p class="muted">3601 Chestnut Ave, Baltimore, MD 21211</p>
+          <div class="listing__foot"><a class="ui-link" href="https://dylansoyster.com/" target="_blank" rel="noopener">Visit website</a></div>
+        </div>
+      </article>
+      <article class="listing reveal reveal-3">
+        <div class="plate">{% include deco-plate.html motif="scales" tone="sage" %}</div>
+        <div class="listing__body">
+          <p class="card-kicker">Whitehall Mill</p>
+          <h3 class="card-title">True Chesapeake Oyster Co.</h3>
+          <p class="muted">3300 Clipper Mill Rd, Baltimore, MD 21211</p>
+          <div class="listing__foot"><a class="ui-link" href="https://truechesapeake.com/" target="_blank" rel="noopener">Visit website</a></div>
+        </div>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- PLACEHOLDER: specific attractions are TBA; categories give the shape.
-     Swap deco-plate includes for photos when available. -->
+<section class="band">
+  <div class="wrap wrap--page">
+    <div class="section-head section-head--center">
+      <h2 class="section-title">Quaff</h2>
+      <p class="section-lead">Coffee by day, a good drink by night.</p>
+    </div>
+    <div class="tiles tiles--wide">
+      <article class="listing reveal">
+        <div class="plate">{% include deco-plate.html motif="arch" tone="steel" %}</div>
+        <div class="listing__body">
+          <p class="card-kicker">Mount Vernon</p>
+          <h3 class="card-title">Ceremony Coffee Roasters</h3>
+          <p class="muted">520 Park Ave, Baltimore, MD 21201</p>
+          <div class="listing__foot"><a class="ui-link" href="https://ceremonycoffee.com/" target="_blank" rel="noopener">Visit website</a></div>
+        </div>
+      </article>
+      <article class="listing reveal reveal-2">
+        <div class="plate">{% include deco-plate.html motif="tulip" tone="blush" %}</div>
+        <div class="listing__body">
+          <p class="card-kicker">Old Goucher</p>
+          <h3 class="card-title">Dutch Courage</h3>
+          <p class="muted">2229 N. Charles St, Baltimore, MD 21218</p>
+          <div class="listing__foot"><a class="ui-link" href="https://dutchcouragebar.com/" target="_blank" rel="noopener">Visit website</a></div>
+        </div>
+      </article>
+      <article class="listing reveal reveal-3">
+        <div class="plate">{% include deco-plate.html motif="fan" tone="sage" %}</div>
+        <div class="listing__body">
+          <p class="card-kicker">Medfield</p>
+          <h3 class="card-title">Union Craft Brewing</h3>
+          <p class="muted">1700 W. 41st St, Baltimore, MD 21211</p>
+          <div class="listing__foot"><a class="ui-link" href="https://www.unioncraftbrewing.com/" target="_blank" rel="noopener">Visit website</a></div>
+        </div>
+      </article>
+    </div>
+    <p class="credits">Placeholder photos via Wikimedia Commons: Fort McHenry by Riis2602 (CC BY-SA 4.0); Walters Art Museum and Charles Theatre by Baltimore Heritage (CC0).</p>
+  </div>
+</section>
