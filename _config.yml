@@ -20,13 +20,10 @@ defaults:
     values:
       image: /assets/img/og-image.png
 
-# No custom domain yet (lovegrovebalto.com purchased; DNS propagating). GitHub
-# serves a project site at https://<owner>.github.io/ben-shannon-wedding-site/.
-# The Actions build injects the base path via --baseurl at build time, and all
-# links/assets use `relative_url`, so they resolve at the subpath now and at the
-# root domain later. When DNS is live, switch `url` to https://lovegrovebalto.com
-# (base path becomes empty automatically) and add a CNAME file.
-url: "https://brent-mills-engineering.github.io"
+# Custom domain (see the CNAME file). The site is served at the domain root, so
+# the Actions build's injected base path is empty and assets/links resolve at
+# `/...`. All internal links use `relative_url`, so they work at the root.
+url: "https://lovegrovebalto.com"
 baseurl: ""
 
 # We hand-author all markup; no theme.
