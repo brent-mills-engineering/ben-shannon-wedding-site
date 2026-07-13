@@ -1,0 +1,54 @@
+{%- comment -%}
+  Structured data (JSON-LD) for the wedding. Rendered on the home page only.
+  Ties the couple's names, the date, and the venues together for search engines.
+{%- endcomment -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Event",
+      "@id": "{{ '/' | absolute_url }}#wedding",
+      "name": "The Wedding of Benjamin Groff & Shannon Frede",
+      "alternateName": ["Groff Frede Wedding", "Ben and Shannon Wedding", "Ben Groff and Shannon Frede Wedding"],
+      "description": "Benjamin (Ben) Groff and Shannon Frede are getting married on Saturday, October 3, 2026 in Baltimore, Maryland. Ceremony at St. Ignatius Church at 3:00 PM; reception at the Maryland Center for History & Culture at 4:00 PM.",
+      "startDate": "2026-10-03T15:00:00-04:00",
+      "endDate": "2026-10-03T23:00:00-04:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "image": "{{ '/assets/img/og-image.png' | absolute_url }}",
+      "url": "{{ '/' | absolute_url }}",
+      "location": [
+        {
+          "@type": "Place",
+          "name": "St. Ignatius Church",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "740 N. Calvert Street",
+            "addressLocality": "Baltimore",
+            "addressRegion": "MD",
+            "postalCode": "21202",
+            "addressCountry": "US"
+          }
+        },
+        {
+          "@type": "Place",
+          "name": "Maryland Center for History & Culture",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "610 Park Avenue",
+            "addressLocality": "Baltimore",
+            "addressRegion": "MD",
+            "postalCode": "21201",
+            "addressCountry": "US"
+          }
+        }
+      ],
+      "organizer": [
+        { "@type": "Person", "name": "Benjamin Groff" },
+        { "@type": "Person", "name": "Shannon Frede" }
+      ]
+    }
+  ]
+}
+</script>

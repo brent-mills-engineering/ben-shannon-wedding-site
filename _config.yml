@@ -1,16 +1,31 @@
 # Ben & Shannon's Wedding - Jekyll site config
 
 title: "Ben & Shannon"
+tagline: "Groff & Frede Wedding"
 description: >-
-  Ben and Shannon are getting married. Find event details, travel and
-  accommodations, and everything you need to celebrate with us.
+  The wedding of Benjamin (Ben) Groff and Shannon Frede, Saturday, October 3,
+  2026 in Baltimore, Maryland. Ceremony at St. Ignatius Church and reception at
+  the Maryland Center for History & Culture. Find the schedule, hotel room
+  blocks, travel and parking, and things to do around Baltimore.
 lang: en
 
-# No custom domain yet. GitHub serves a project site at
-# https://<owner>.github.io/ben-shannon-wedding-site/. Leave baseurl empty here;
-# the Actions build injects the correct base path via --baseurl at build time,
-# and all internal links/assets use the `relative_url` filter so they resolve
-# whether the site is served at a subpath now or a root domain later.
+# Author + default social-preview image feed jekyll-seo-tag.
+author:
+  name: "Ben Groff & Shannon Frede"
+twitter:
+  card: summary_large_image
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/img/og-image.png
+
+# No custom domain yet (lovegrovebalto.com purchased; DNS propagating). GitHub
+# serves a project site at https://<owner>.github.io/ben-shannon-wedding-site/.
+# The Actions build injects the base path via --baseurl at build time, and all
+# links/assets use `relative_url`, so they resolve at the subpath now and at the
+# root domain later. When DNS is live, switch `url` to https://lovegrovebalto.com
+# (base path becomes empty automatically) and add a CNAME file.
 url: "https://brent-mills-engineering.github.io"
 baseurl: ""
 

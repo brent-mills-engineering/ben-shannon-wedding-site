@@ -1,17 +1,29 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#faf6ef">
+<meta name="robots" content="index, follow, max-image-preview:large">
 
 {%- comment -%}
-  jekyll-seo-tag emits <title>, description, canonical, and Open Graph / Twitter
-  tags from _config.yml and page front matter.
+  Title: hand-controlled for clean, keyword-appropriate <title>s. jekyll-seo-tag
+  still emits the description, canonical, Open Graph, and Twitter tags.
 {%- endcomment -%}
-{% seo %}
+{%- if page.seo_title -%}
+<title>{{ page.seo_title }}</title>
+{%- elsif page.title and page.title != "" -%}
+<title>{{ page.title }} &middot; {{ site.title }} Wedding</title>
+{%- else -%}
+<title>{{ site.title }} &middot; {{ site.tagline }}</title>
+{%- endif -%}
+
+{% seo title=false %}
+
+{%- if page.url == '/' -%}
+{%- include schema.html -%}
+{%- endif -%}
 
 {%- comment -%}
-  Design-system fonts (Google Fonts substitutions, per the design packet):
-  Marcellus (display), Cormorant Garamond (serif body/subtitles), Jost (UI),
-  Pinyon Script (names & flourishes). Swap for @font-face if licensed faces arrive.
+  Design-system fonts (Google Fonts substitutions): Marcellus, Cormorant
+  Garamond, Jost, Pinyon Script.
 {%- endcomment -%}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
