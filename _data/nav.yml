@@ -1,6 +1,6 @@
 # Top navigation. `url` values are root-relative; templates pass them through
 # the `relative_url` filter so they resolve under the site's base path.
-# Parking is intentionally NOT here: it's reachable via links on Schedule + FAQ.
+# Parking lives on the Schedule page (the #parking section), not its own nav item.
 - title: Home
   url: /
 - title: Schedule
