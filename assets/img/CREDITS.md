@@ -25,6 +25,9 @@ wedding site.
 | `artifact.jpg` | Artifact Coffee | baltimore.org |
 | `dylans.jpg` | Dylan's Oyster Cellar | beveragejournalinc.com |
 | `true-chesapeake.jpg` | True Chesapeake Oyster Co. | baltimorefishbowl.com |
+| `ceremony-coffee.jpg` | Ceremony Coffee Roasters | ceremonycoffee.com |
+| `dutch-courage.jpg` | Dutch Courage | supplied |
+| `union-craft.jpg` | Union Craft Brewing | baltimoremagazine.com |
 
 `og-image.png` is generated from the site's own branding.
 All raster photos optimized to <=1200px wide, JPEG q62.
