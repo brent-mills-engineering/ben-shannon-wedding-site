@@ -77,8 +77,8 @@ _layouts/default.html  Page shell (renders the page-hero band + content)
 _includes/             head (fonts), header (nav), footer (pine), deco-plate (SVG imagery)
 assets/css/main.css    Design tokens + components + full-bleed layout system
 index.html             Home (hero + arch triptych)
-schedule.html          Venue location, day-of timeline, parking (#parking section)
-travel.html            Room blocks, hotel recs, restaurant recs
+schedule.html          Venue location, day-of timeline, pointer to parking
+travel.html            Room blocks, getting here, parking + transit (#parking section)
 things-to-do.html      Area sites & attractions (deco gallery)
 faq.html               Frequently asked questions
 ```

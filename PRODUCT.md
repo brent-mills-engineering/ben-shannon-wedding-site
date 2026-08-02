@@ -38,8 +38,8 @@ motifs, and palette.
 ## Pages
 
 - **Home**: hero, welcome, and the way into the three planning pages.
-- **Schedule**: venue location, the day-of schedule, and parking + day-of directions (the `#parking` section).
-- **Travel & Stay**: hotel room blocks, hotel recommendations, restaurant recommendations.
+- **Schedule**: venue location and the day-of schedule, with a pointer to parking.
+- **Travel & Stay**: hotel room blocks, getting here, and parking + transit (the `#parking` section).
 - **Things to Do**: recommended sites and attractions in the area.
 - **FAQ**: where to stay, day-of schedule, venue, parking, getting there.
 
