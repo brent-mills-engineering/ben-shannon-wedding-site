@@ -1,5 +1,10 @@
 # Image credits
 
+Filenames below refer to the masters in `_photos-src/`. What the site actually
+serves are the responsive derivatives beside this file (`<name>-<width>.webp`
+and `.jpg`), generated from those masters by `tools/build-images.sh`. Credit and
+licensing follow the master, not the individual derivative.
+
 ## Freely-licensed (Wikimedia Commons)
 
 Attribution is required for the CC BY-SA images and is shown on the pages where

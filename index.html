@@ -10,7 +10,9 @@ permalink: /
 ---
 
 <header class="hero band band--pine">
-  <img class="hero__photo" src="{{ '/assets/img/couple-arch.jpg' | relative_url }}" alt="Ben and Shannon standing together in the arched brick gateway of a Baltimore garden wall" width="1600" height="1067" fetchpriority="high" decoding="async">
+  {% include photo.html name="couple-arch" class="hero__photo" eager="true"
+     alt="Ben and Shannon standing together in the arched brick gateway of a Baltimore garden wall"
+     widths="960,1440,1600" w="1600" h="1067" sizes="100vw" %}
   <div class="hero__frame reveal">
     <p class="bs-eyebrow bs-eyebrow--rules bs-eyebrow--invert hero__eyebrow">Together with joy</p>
     <h1 class="hero__names">Ben <span class="amp">&amp;</span> Shannon<span class="sr-only">: the wedding of Benjamin Groff and Shannon Frede</span></h1>
@@ -29,7 +31,10 @@ permalink: /
     </div>
     <div class="reveal reveal-2">
       <div class="bs-arch" style="aspect-ratio:4/5;">
-        <img src="{{ '/assets/img/couple-steps.jpg' | relative_url }}" alt="Ben and Shannon sitting on a flight of stone steps, laughing together on a summer afternoon" loading="lazy" width="1000" height="1499">
+        {% include photo.html name="couple-steps"
+           alt="Ben and Shannon sitting on a flight of stone steps, laughing together on a summer afternoon"
+           widths="455,910" w="910" h="1138"
+           sizes="(min-width:72rem) 455px, (min-width:52rem) 39vw, 92vw" %}
       </div>
     </div>
   </div>
