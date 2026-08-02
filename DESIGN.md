@@ -62,12 +62,26 @@ bands/splits/tiles. The layout renders a hero band from front matter
 
 ## Imagery
 
-Image-led by design. Real photos come from the couple later; until then, every
-image slot holds a custom **art-deco SVG deco plate** (fan/sunburst, nouveau
-tulip, nested arches, trout scales) in the trout palette: genuine on-brand
-imagery, not gray placeholder blocks, and a one-line swap to `<img>` later. The
-packet's inspiration images (trout, deco interiors) are reference-only and are
-NOT used as site content.
+Image-led by design, in three layers:
+
+1. **The couple.** Engagement photos hold the emotional slots: the home hero
+   (full-bleed, the couple standing in a real brick arch, which is the site's
+   motif made literal), the home welcome arch, the two Travel & Stay arches, and
+   the FAQ closer. One per fold at most; they are the reason the page is warm.
+2. **Places.** Venue, hotel, and neighborhood photos in `.listing` cards and
+   `.plate` slots on Schedule, Travel & Stay, and Things to Do.
+3. **Deco plates.** The custom art-deco SVGs (fan/sunburst, nouveau tulip,
+   nested arches, trout scales) stay where the subject is a *concept* rather
+   than a place or a person: the home "Start here" triptych and the parking
+   cards. They are on-brand imagery, not placeholders, and should not be swapped
+   for photos of unrelated subjects just to fill the slot.
+
+The packet's inspiration images (trout, deco interiors) are reference-only and
+are NOT used as site content.
+
+Photographic type-over-image (the hero) always carries a scrim: cream, sage, and
+gold type on a `linear-gradient` of the pine ground, tuned so every string
+clears WCAG AA against the brightest pixels it covers.
 
 ## Motion
 
