@@ -48,4 +48,6 @@ motifs, and palette.
 - Static Jekyll on GitHub Pages; no build step beyond Jekyll; no JS frameworks.
 - All internal links use the `relative_url` filter (project subpath today,
   custom domain later).
-- Content is placeholder until the couple supplies real details and photos.
+- Engagement photos are in (home hero, home welcome, two Travel & Stay slots,
+  FAQ closer); deco plates still hold the concept slots. Remaining copy stays
+  placeholder until the couple supplies the details.
