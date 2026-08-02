@@ -118,6 +118,9 @@ body{
   overflow-x:hidden;
 }
 img,svg{max-width:100%; display:block;}
+/* <picture> is only a format switch; it should never generate a box of its own,
+   so the <img> lays out exactly as a bare <img> would. */
+picture{display:contents;}
 h1,h2,h3,h4{font-family:var(--font-display); font-weight:var(--fw-regular); color:var(--text-heading); line-height:var(--lh-tight); text-wrap:balance;}
 p{text-wrap:pretty;}
 a{color:var(--text-link); text-decoration:underline; text-underline-offset:3px; text-decoration-thickness:1px;}
@@ -253,7 +256,7 @@ a:hover{color:var(--text-link-hover);}
   box-shadow:var(--shadow-sm); background:var(--cream-100); aspect-ratio:4/3;}
 .plate--tall{aspect-ratio:3/4;}
 .plate--wide{aspect-ratio:16/10;}
-.plate > .deco-plate,.plate > img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;}
+.plate > .deco-plate,.plate > img,.plate > picture > img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;}
 
 /* ============================================================
    ARCH (the signature niche: new architectural shape)
@@ -263,7 +266,7 @@ a:hover{color:var(--text-link-hover);}
   color:var(--text-body);}
 .bs-arch::after{content:""; position:absolute; inset:8px; border-radius:var(--radius-arch);
   border:1px solid var(--border-gold); opacity:0.55; pointer-events:none; z-index:2;}
-.bs-arch > .deco-plate,.bs-arch > img{position:absolute; inset:0; z-index:0; width:100%; height:100%; object-fit:cover;}
+.bs-arch > .deco-plate,.bs-arch > img,.bs-arch > picture > img{position:absolute; inset:0; z-index:0; width:100%; height:100%; object-fit:cover;}
 .bs-arch__body{position:relative; z-index:1; display:flex; flex-direction:column; align-items:center; justify-content:center;
   height:100%; min-height:inherit; padding:var(--space-6) var(--space-5); text-align:center; gap:var(--space-2);}
 .bs-arch--sage{background:var(--sage-100); color:var(--sage-700);}

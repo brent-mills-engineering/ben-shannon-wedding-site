@@ -45,7 +45,10 @@ permalink: /faq/
   <div class="wrap split">
     <div class="reveal">
       <div class="plate plate--wide">
-        <img src="{{ '/assets/img/couple-walking.jpg' | relative_url }}" alt="Ben and Shannon walking hand in hand past a stone building in Baltimore" loading="lazy" width="1200" height="800">
+        {% include photo.html name="couple-walking"
+           alt="Ben and Shannon walking hand in hand past a stone building in Baltimore"
+           widths="545,1090" w="1090" h="681"
+           sizes="(min-width:72rem) 545px, (min-width:52rem) 47vw, 92vw" %}
       </div>
     </div>
     <div class="reveal reveal-2">

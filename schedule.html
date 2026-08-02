@@ -14,7 +14,10 @@ permalink: /schedule/
   <div class="wrap split">
     <div class="reveal">
       <div class="bs-arch" style="aspect-ratio:4/5;">
-        <img src="{{ '/assets/img/st-ignatius.jpg' | relative_url }}" alt="St. Ignatius Church, a red-brick Italianate Catholic church in Baltimore's Mount Vernon" loading="lazy" width="1200" height="1500">
+        {% include photo.html name="st-ignatius"
+           alt="St. Ignatius Church, a red-brick Italianate Catholic church in Baltimore's Mount Vernon"
+           widths="480,720" w="720" h="900"
+           sizes="(min-width:72rem) 545px, (min-width:52rem) 47vw, 92vw" %}
       </div>
     </div>
     <div class="reveal reveal-2">
@@ -37,7 +40,10 @@ permalink: /schedule/
   <div class="wrap split is-reverse">
     <div class="reveal">
       <div class="bs-arch" style="aspect-ratio:4/5;">
-        <img src="{{ '/assets/img/maryland-center.jpg' | relative_url }}" alt="The library reading room at the Maryland Center for History & Culture in Baltimore" loading="lazy" width="547" height="365">
+        {% include photo.html name="maryland-center"
+           alt="The library reading room at the Maryland Center for History &amp; Culture in Baltimore"
+           widths="292" w="292" h="365"
+           sizes="(min-width:72rem) 545px, (min-width:52rem) 47vw, 92vw" %}
       </div>
     </div>
     <div class="reveal reveal-2">

@@ -38,6 +38,7 @@ permalink: pretty
 # Keep dev cruft and build tooling out of the published site.
 exclude:
   - local/
+  - tools/          # image build script; not part of the published site
   - README.md
   - PRODUCT.md
   - DESIGN.md

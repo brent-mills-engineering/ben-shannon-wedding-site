@@ -1,0 +1,46 @@
+{%- comment -%}
+  Responsive photo: a <picture> with a WebP source and a JPEG fallback, each
+  carrying a srcset assembled from the derivatives in assets/img/.
+
+  Derivatives come from tools/build-images.sh, which crops every master in
+  _photos-src/ to the aspect ratio of the slot it renders in. That crop is what
+  makes the `w` descriptors below trustworthy: the image and its CSS box share
+  an aspect ratio, so the width the browser picks is the width it paints.
+
+  Note that .plate and .bs-arch absolutely position their image, so the CSS in
+  assets/css/main.css matches `> picture > img` as well as `> img`. Adding a
+  <picture> wrapper without that selector would drop object-fit and break the
+  layout.
+
+  Parameters
+    name    required  master basename, e.g. "fort-mchenry"
+    alt     required  alt text
+    widths  required  comma-separated derivative widths, largest last
+    sizes   required  the CSS `sizes` attribute for this slot
+    w, h    required  intrinsic pixels of the largest derivative
+    class   optional  class applied to the <img>
+    eager   optional  "true" for the LCP image (eager + high fetchpriority)
+{%- endcomment -%}
+{%- assign ws = include.widths | split: "," -%}
+{%- capture webp_srcset -%}
+  {%- for x in ws -%}
+    {{- '/assets/img/' | append: include.name | append: '-' | append: x | append: '.webp' | relative_url }} {{ x }}w
+    {%- unless forloop.last %}, {% endunless -%}
+  {%- endfor -%}
+{%- endcapture -%}
+{%- capture jpeg_srcset -%}
+  {%- for x in ws -%}
+    {{- '/assets/img/' | append: include.name | append: '-' | append: x | append: '.jpg' | relative_url }} {{ x }}w
+    {%- unless forloop.last %}, {% endunless -%}
+  {%- endfor -%}
+{%- endcapture -%}
+{%- assign largest = ws | last -%}
+{%- assign fallback = '/assets/img/' | append: include.name | append: '-' | append: largest | append: '.jpg' | relative_url -%}
+<picture>
+  <source type="image/webp" srcset="{{ webp_srcset }}" sizes="{{ include.sizes }}">
+  <img src="{{ fallback }}" srcset="{{ jpeg_srcset }}" sizes="{{ include.sizes }}"
+       alt="{{ include.alt }}" width="{{ include.w }}" height="{{ include.h }}"
+       {%- if include.class %} class="{{ include.class }}"{% endif %}
+       {%- if include.eager == 'true' %} loading="eager" fetchpriority="high"
+       {%- else %} loading="lazy" decoding="async"{% endif %}>
+</picture>
