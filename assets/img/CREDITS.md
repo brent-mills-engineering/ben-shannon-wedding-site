@@ -26,13 +26,23 @@ wedding site.
 |------|---------|--------|
 | `courtyard.jpg` | Courtyard by Marriott Baltimore Downtown/Inner Harbor | Booking.com (hotel photo) |
 | `delta.jpg` | Delta Hotels by Marriott Baltimore North | Marriott (hotel photo) |
+| `hotel-revival.jpg` | Hotel Revival (lobby lounge) | hotelrevivalbaltimore.com |
+| `hotel-ulysses.jpg` | Hotel Ulysses (2 E. Read St facade) | ash.world |
 | `maryland-center.jpg` | Maryland Center for History & Culture (library reading room) | supplied |
 | `artifact.jpg` | Artifact Coffee | baltimore.org |
 | `dylans.jpg` | Dylan's Oyster Cellar | beveragejournalinc.com |
 | `true-chesapeake.jpg` | True Chesapeake Oyster Co. | baltimorefishbowl.com |
+| `ekiben.jpg` | Ekiben (Neighborhood Bird bun) | ekibenbaltimore.com |
+| `little-donnas.jpg` | Little Donna's | littledonnas.com |
+| `thames-street.jpg` | Thames Street Oyster House (upstairs dining room) | thamesstreetoysterhouse.com |
 | `ceremony-coffee.jpg` | Ceremony Coffee Roasters | ceremonycoffee.com |
 | `dutch-courage.jpg` | Dutch Courage | supplied |
 | `union-craft.jpg` | Union Craft Brewing | baltimoremagazine.com |
+
+These are the businesses' own site or press photos, used to illustrate a
+recommendation. `thames-street.jpg` has the restaurant's decorative page border
+cropped away. Confirm reuse with each business before launch if that matters to
+the couple.
 
 ## Engagement photos (Ben & Shannon)
 
