@@ -40,11 +40,16 @@ charles-theatre    16:10  400,800
 artifact           16:10  400,800
 dylans             16:10  400,800
 true-chesapeake    16:10  400,800
+ekiben             16:10  400,800
+little-donnas      16:10  400,800
+thames-street      16:10  400,800
 ceremony-coffee    16:10  400,800
 dutch-courage      16:10  400,800
 union-craft        16:10  400,800
 courtyard          16:10  576,1152
 delta              16:10  576,1152
+hotel-revival      16:10  576,1152
+hotel-ulysses      16:10  576,1152
 couple-walking     16:10  545,1090
 st-ignatius        4:5    480,1090
 maryland-center    4:5    480,1090
