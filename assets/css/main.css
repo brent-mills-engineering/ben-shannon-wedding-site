@@ -345,6 +345,11 @@ a:hover{color:var(--text-link-hover);}
 .listing__foot{margin-top:auto; padding-top:var(--space-4);}
 .center{text-align:center;}
 .lead{font-family:var(--font-serif); font-size:var(--fs-lead); line-height:var(--lh-normal); color:var(--text-muted);}
+/* Group label: a rules-eyebrow that splits one section's tiles into labelled
+   groups (e.g. parking vs. car-free options on Travel & Stay). */
+.group-label{margin-bottom:clamp(1.25rem,2.5vw,1.75rem);}
+.group-label--between{margin-top:clamp(2.5rem,6vw,4rem);}
+
 .credits{font-family:var(--font-sans); font-size:var(--fs-micro); letter-spacing:0.02em; color:var(--text-subtle); text-align:center; margin-top:var(--space-7);}
 .credits a{color:var(--text-subtle); text-decoration:underline;}
 
